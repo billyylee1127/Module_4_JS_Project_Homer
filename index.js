@@ -1,5 +1,9 @@
-async function fetchMovies() {
-    const res = await fetch(`https://www.omdbapi.com/?apikey=95660dd5&s=fast`)
+const searchInput = document.querySelector(`input`)
+const searchIcon = document.querySelector(`.fa-magnifying-glass`)
+
+
+async function fetchMovies(searchQuery) {
+    const res = await fetch(`https://www.omdbapi.com/?apikey=95660dd5&s=${searchQuery}`)
     const data = await res.json()
     const searchResultsEl = document.querySelector(`.search-results`)
     console.log(data) 
@@ -7,7 +11,12 @@ async function fetchMovies() {
     searchResultsEl.innerHTML = data.Search.map((movie) => searchHTML(movie)).join("")        
 }
 
-fetchMovies()
+fetchMovies(searchQuery)
+
+searchInput.addEventListener(`keypress`, (event) => {
+})
+
+
 
 function searchHTML(movie) {
     return `<div class="movie-card">
