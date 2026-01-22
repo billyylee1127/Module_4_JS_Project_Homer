@@ -8,6 +8,10 @@ function onSearchChange(event) {
     fetchMovies(searchQuery)
 }
 
+function onFormSubmit(event) {
+    event.preventDefault()
+}
+
 async function fetchMovies(searchQuery) {
     const res = await fetch(`https://www.omdbapi.com/?apikey=95660dd5&s=${searchQuery}`)
     const data = await res.json()
