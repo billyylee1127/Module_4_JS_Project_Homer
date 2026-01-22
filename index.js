@@ -1,6 +1,6 @@
 const searchInput = document.querySelector(`.search-input`)
 const searchIcon = document.querySelector(`.fa-magnifying-glass`)
-const searchResultsEl = document.querySelector(`.search-results`)
+const searchResultsEl = document.querySelector(`.search-results__container`)
 
 
 function onSearchChange(event) {
@@ -25,8 +25,8 @@ async function fetchMovies(searchQuery) {
 
 
 function searchHTML(movie) {
-    return `<div class="movie-card">
-            <div class="movie-card__container">
+    return `<div class="row__movie-card">
+            <div class="movie-card__wrapper">
                 <img src="${movie.Poster}">
                 <h3>${movie.Title}</h3>
                 <p><b>Type:</b>${movie.Type}</p>
