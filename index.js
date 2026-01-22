@@ -1,11 +1,11 @@
-const searchInput = document.querySelector(`input`)
+const searchInput = document.querySelector(`.search-input`)
 const searchIcon = document.querySelector(`.fa-magnifying-glass`)
 const searchResultsEl = document.querySelector(`.search-results`)
-const searchQuery = onSearchChange(event)
 
 
 function onSearchChange(event) {
-    console.log(event.target.value)
+    const searchQuery = event.target.value
+    fetchMovies(searchQuery)
 }
 
 async function fetchMovies(searchQuery) {
@@ -15,7 +15,6 @@ async function fetchMovies(searchQuery) {
     searchResultsEl.innerHTML = data.Search.map((movie) => searchHTML(movie)).join("")        
 }
 
-fetchMovies(searchQuery)
 
 
 
