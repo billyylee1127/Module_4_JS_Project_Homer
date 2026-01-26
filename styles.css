@@ -198,11 +198,10 @@ img {
 
 .footer__logo {
   display: flex;
-  background-color: #fff;
 }
 
 .footer__logo--img {
-  width: 160px;
+  width: 140px;
   filter: grayscale(1) invert(1);
 }
 
@@ -212,11 +211,17 @@ img {
 }
 
 .footer__list {
-  margin: 20px 0 24px 0;
+  margin-bottom: 16px;
 }
 
 .footer__link {
   padding: 0 8px;
+  font-size: 12px;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  margin-bottom: 24px;
 }
 
 /*
@@ -238,9 +243,27 @@ Small Phones, Tablets, Large Smartphones
     font-size: 24px;
   }
 
+  .search-input {
+    font-size: 16px;
+  }
+
   .row__movie-card {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
+ .input-wrapper__img {
+    display: none;
+  }
+}
+
+/*
+
+small phones
+
+*/
+
+@media (max-width: 550px) {
+ 
 }
