@@ -153,7 +153,7 @@ Search Results
 }
 
 .row__movie-card {
-  width: 30%;
+  width: 28%;
   display: flex;
   justify-content: center;
 }
@@ -178,4 +178,69 @@ p {
 
 img {
   width: 100%;
+}
+
+
+/*
+ Footer 
+ */
+
+ .row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ }
+
+ footer {
+  background-color: #242424;
+}
+
+.footer__logo {
+  display: flex;
+  background-color: #fff;
+}
+
+.footer__logo--img {
+  width: 160px;
+  filter: grayscale(1) invert(1);
+}
+
+.footer__link,
+.footer__copyright {
+  color: #fff;
+}
+
+.footer__list {
+  margin: 20px 0 24px 0;
+}
+
+.footer__link {
+  padding: 0 8px;
+}
+
+/*
+
+Small Phones, Tablets, Large Smartphones
+
+*/
+
+@media (max-width: 768px) {
+  .nav__link {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .row__movie-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 }

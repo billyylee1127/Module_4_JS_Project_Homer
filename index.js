@@ -8,6 +8,8 @@ function onSearchChange(event) {
     fetchMovies(searchQuery)
 }
 
+
+
 function onFormSubmit(event) {
     event.preventDefault()
 }
@@ -15,11 +17,32 @@ function onFormSubmit(event) {
 async function fetchMovies(searchQuery) {
     const res = await fetch(`https://www.omdbapi.com/?apikey=95660dd5&s=${searchQuery}`)
     const data = await res.json()
+    if (!data.Search) {
+    searchResultsEl.innerHTML = "<p>No results found</p>";
+    return;
+}
+
+    console.log(data.Search)
+
+    const newestMovies = getTop6NewestMovies(data.Search);
     
-    searchResultsEl.innerHTML = data.Search.map((movie) => searchHTML(movie)).join("")        
+
+searchResultsEl.innerHTML = newestMovies
+    .map((movie) => searchHTML(movie))
+    .join("");
+
+function getTop6NewestMovies(movies) {
+    return movies
+        .sort((a, b) => Number(b.Year) - Number(a.Year))
+        .slice(0, 6);
+}
 }
 
 
+
+
+    
+    
 
 
 
