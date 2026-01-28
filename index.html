@@ -47,10 +47,15 @@
     </section>
     <main>
         <section id="search-results">
+            <select id="filter" onchange="filterMovies()">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="Newest_to_oldest">Year, Newest to Oldest</option>
+                    <option value="Oldest_to_newest">Year, Oldest to Newest</option>
+                </select>
             <div class="search-results__container">
                 <div class="row__movie-card">
                     <div class="movie-card__wrapper">
-                        <img src=".movie-card.json">
+                        <img src="">
                         <h3>Movie Title</h3>
                         <p><b>Type:</b> movie</p>
                         <p><b>Year:</b> 2025</p>

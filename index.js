@@ -34,7 +34,6 @@ searchResultsEl.innerHTML = newestMovies
 function getTop6NewestMovies(movies) {
     return movies
         .sort((a, b) => Number(b.Year) - Number(a.Year))
-        .slice(0, 6);
 }
 }
 
@@ -51,9 +50,9 @@ function searchHTML(movie) {
     return `<div class="row__movie-card">
             <div class="movie-card__wrapper">
                 <img src="${movie.Poster}">
-                <h3>${movie.Title}</h3>
-                <p><b>Type:</b>${movie.Type}</p>
-                <p><b>Year:</b>${movie.Year}</p>
+                <h3> ${movie.Title}</h3>
+                <p><b>Type:</b> ${movie.Type}</p>
+                <p><b>Year:</b> ${movie.Year}</p>
             </div>
         </div>` 
 }
