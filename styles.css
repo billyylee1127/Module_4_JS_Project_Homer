@@ -144,6 +144,11 @@ Search Results
 
 */
 
+#year-sort {
+  margin: 16px 0 0 8px;
+  font-size: 20px;
+}
+
 .search-results__container {
   display: flex;
   flex-wrap: wrap;
@@ -162,7 +167,7 @@ Search Results
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 30%;
   justify-content: center;
   padding: 16px;
 }
@@ -230,21 +235,27 @@ Small Phones, Tablets, Large Smartphones
 
 */
 
+@media (max-width: 795px) {
+  h1 {
+    font-size: 36px;
+  }
+
+   h2 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav__link {
     font-size: 16px;
   }
 
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 24px;
+  #year-sort {
+    font-size: 16px;
   }
 
   .search-input {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .row__movie-card {
@@ -265,5 +276,20 @@ small phones
 */
 
 @media (max-width: 550px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  #year-sort {
+    font-size: 12px;
+  }
+
+  .search-input {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
  
 }

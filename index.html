@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homer</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/bd208f162b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -29,12 +29,12 @@
         <header>
             <div class="header__container">
                 <div class="header__description">
-                    <h1>Stream Movies from the convenience of your home</h1>
-                    <h2>Find just about any movie you can think of</h2>
-                    <form onsubmit="onFormSubmit(event)">
+                    <h1>Stream Movies and Shows from the convenience of your home</h1>
+                    <h2>Find just about any movie or show you can think of</h2>
+                    <form class="search-form">
                         <div class="input">
                             <div class="input__wrapper">
-                                <input type="text" class= "search-input" placeholder="What movie do you want to watch?" onchange="onSearchChange(event)">
+                                <input type="text" class= "search-input" placeholder="What would you like to watch?">
                                 <figure class="input-wrapper__img">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </figure>
@@ -47,17 +47,17 @@
     </section>
     <main>
         <section id="search-results">
-            <select id="filter" onchange="filterMovies()">
-                    <option value="" disabled selected>Sort</option>
-                    <option value="Newest_to_oldest">Year, Newest to Oldest</option>
-                    <option value="Oldest_to_newest">Year, Oldest to Newest</option>
-                </select>
+           <select id="year-sort">
+                <option value="">Sort by year</option>
+                <option value="newest">Newest → Oldest</option>
+                <option value="oldest">Oldest → Newest</option>
+            </select>
+
             <div class="search-results__container">
                 <div class="row__movie-card">
                     <div class="movie-card__wrapper">
                         <img src="">
-                        <h3>Movie Title</h3>
-                        <p><b>Type:</b> movie</p>
+                        <h3>Title</h3>
                         <p><b>Year:</b> 2025</p>
                     </div>
                 </div>
